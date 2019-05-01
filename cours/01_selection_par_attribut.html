@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>01 sélection par attribut</title>
+
+	<style>
+		section {
+			width: 80%;
+			margin: 20px auto;
+			padding: 20px;
+			border: 1px solid #eee;
+			box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+		}
+
+		section > h2 {
+			text-align: center;
+		}
+
+		article h3 {
+			color: darkblue;
+		}
+
+		section:nth-child(odd) {
+			background-color: #eee;
+		}		
+	</style>
+</head>
+<body>
+	
+		<section>
+				<h2>01 sélection par attribut</h2>
+				<hr>
+				<article>					
+						<h3>I. Sélection par attribut avec valeur exacte</h3>
+						<hr>
+						<pre>
+	<code>[attribut="value"]</code>		<- Explication
+	<code>[type="email"]</code>			<- Exemple								
+						</pre>
+				</article>
+				<article>					
+						<h3>II. Sélection par attribut avec début de la valeur</h3>
+						<hr>
+						<pre>
+	<code>[attribut^="value"]</code>		<- Explication
+	<code>[href^="http"]</code>			<- Exemple		
+						</pre>
+				</article>
+				<article>					
+						<h3>III. Sélection par attribut avec la fin de la valeur</h3>
+						<hr>
+						<pre>
+	<code>[attribut$="value"]</code>		<- Explication
+	<code>[href^=".com"]</code>			<- Exemple		
+						</pre>
+						<p>Pratique pour les images et définir une petite puce 'png' ou 'jpg'</p>
+				</article>
+				<article>					
+						<h3>IV. Sélection par attribut avec une partie de la valeur</h3>
+						<hr>
+						<pre>
+	<code>[attribut*="value"]</code>		<- Explication
+	<code>[href*="www.facebook.com"]</code>	<- Exemple		
+						</pre>
+				</article>
+		</section> <!-- Fin 01 - sélecteur par attribut -->
+
+		<section>
+				<h2>02 sélection par référence</h2>
+				<hr>
+				<article>					
+						<h3>I. Sélection d'enfant direct</h3>
+						<hr>
+						<pre>
+	<code>element > element</code>		<- Explication
+	<code>.container > *</code>			<- Exemple								
+						</pre>
+				</article>
+				<article>					
+						<h3>II. Sélection de voisin direct</h3>
+						<hr>
+						<pre>
+	<code>element + element</code>		<- Explication
+	<code>h1 + h2</code>				<- Exemple		
+						</pre>
+				</article>
+				<article>					
+						<h3>III. Sélection de voisin directe ou indirect</h3>
+						<hr>
+						<pre>
+	<code>element ~ element</code>		<- Explication
+	<code>h1 ~ h2</code>				<- Exemple		
+						</pre>
+						<p>Pratique pour les images et définir une petite puce 'png' ou 'jpg'</p>
+				</article>
+		</section> <!-- Fin 02 - sélecteur par référence -->
+
+		<section>
+				<h2>03 sélection par pseudo-classes</h2>
+				<hr>
+				<article>					
+						<h3>I. :first-child et :last-child</h3>
+						<hr>
+						<pre>
+	<code>element:first-child</code>		<- Explication
+	<code>li:first-child</code>			<- Exemple		
+
+	<code>element:last-child</code>		<- Explication
+	<code>li:last-child</code>			<- Exemple								
+						</pre>
+				</article>
+				<article>					
+						<h3>II. :only-child</h3>
+						<hr>
+						<pre>
+	<code>element:only-child</code>		<- Explication
+	<code>li:only-child</code>			<- Exemple		
+						</pre>
+				</article>
+				<article>					
+						<h3>III. :empty</h3>
+						<hr>
+						<pre>
+	<code>element:empty</code>		<- Explication
+	<code>li:empty</code>		<- Exemple		
+						</pre>
+						<p>Pratique pour les images et définir une petite puce 'png' ou 'jpg'</p>
+				</article>
+				<article>					
+						<h3>IV. :nth-child()</h3>
+						<hr>
+						<pre>
+	<code>element:nth-child( 3 arguments possible )</code>		<- Explication
+	<code>li:nth-child(even)</code>	<- Exemple	even = paire
+	<code>li:nth-child(odd)</code>	<- Exemple	even = impaire
+
+	<code>element:nth-child(an+b)</code>	<- Explication
+	<code>li:nth-child(3n)</code>	<- Exemple ici 3*3
+	<code>li:nth-child(3n+1)</code>	<- Exemple ici 3*3 + 1
+
+
+						</pre>
+				</article>
+				<article>					
+						<h3>V. :nth-of-type()</h3>
+						<hr>
+						<p>Fait exactement la même chose que 'nth-child()' à la différence que si un quelconque element est ajouter et casse ainsi la structure, 'nth-of-type' permettra de garder toujours la structure définit sur l'élement.</p>
+						<pre>
+	<code>element:nth-of-type( 3 arguments possible)</code>		<- Explication
+	<code>li:nth-of-type</code>	<- Exemple		
+						</pre>
+				</article>
+				<article>					
+						<h3>VI. :not()</h3>
+						<hr>
+						<pre>
+	<code>element:not( element )</code>		<- Explication
+	<code>ul:not(li)</code>			<- Exemple		
+						</pre>
+				</article>
+		</section> <!-- Fin 03 - sélecteur par pseudo-classes -->
+
+		<section>
+				<h2>04 sélection par pseudo-éléments</h2>
+				<hr>
+				<article>					
+						<h3>I. ::first-line</h3>
+						<hr>
+						<pre>
+	<code>element::first-line</code>		<- Explication
+	<code>p::first-line</code>			<- Exemple								
+						</pre>
+				</article>
+				<article>					
+						<h3>II. ::first-letter</h3>
+						<hr>
+						<pre>
+	<code>element::first-letter</code>		<- Explication
+	<code>p::first-letter</code>			<- Exemple		
+						</pre>
+				</article>
+				<article>					
+						<h3>III. ::before et ::after</h3>
+						<hr>
+						<pre>
+	<code>element::before</code>		<- Explication
+	<code>h1:before {
+		content: '1. ';			<--- ajoute un petit 1. suivit d'un espace
+		content: '';			<--- utiliser pour définir son propre style
+		contet: url(facebook.png);	<--- Ajoute une image png
+		content: attr(attribut html); 	<--- Affiche un attribut html
+	}
+	</code>
+	exemple :
+	<code>
+		[href*="facebook.com"]::before {
+			content: url(facebook.png);
+	}
+	</code>
+
+	<code>element::after</code>		<- Explication
+	C'est exactement la même chose que before mais tout s'affichera après
+						</pre>
+				</article>
+		</section> <!-- Fin 04 - sélecteur par pseudo éléments -->
+
+</body>
+</html>
